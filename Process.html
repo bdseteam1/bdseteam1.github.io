@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<title>BDSE TEAM ONE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+        
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("w3images/Data.jpg");
+          min-height: 100%;
+        }
+        
+        .w3-bar .w3-button {
+          padding: 16px;
+        }
+        .w3-photo {
+            width:100%;
+            height:100%;
+            background:#4d4d4d;
+            border-radius: 99em;
+            }
+        
+        </style>
+<body >
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+        <div class="w3-bar w3-black w3-card" id="myNavbar",width=120%>
+          <a href="#home" class="w3-bar-item w3-button w3-wide">BDSE TEAM ONE</a>
+          <!-- Right-sided navbar links -->
+          <div class="w3-right w3-hide-small">
+            <a href="index.html#about" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="index.html#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>TEAM</a>
+            <a href="index.html#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SKILL</a>
+            <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-database"></i>HADOOP</a>
+          </div>
+          <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Sidebar on small screens when clicking the menu icon -->
+      <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">SKILL</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PROCESS</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">HADOOP</a>
+      </nav>
+<div class="w3-panel">
+ 
+</div>
+<!-- First Grid: Logo & About -->
+
+<div id="home" class="w3-container">
+    <br>
+    <h1 class=" w3-center"><i class="fa fa-cogs"></i>&nbsp專案流程</h1>
+  <hr>
+  <div class="w3-row w3-center">
+    <a href="#資料來源"><div class="w3-col w3-container m2 w3-yellow w3-bar-item w3-button" style="margin:0.5em 1em"><p>1.&nbsp 資料來源</p></div></a>
+    <a href="#資料前處理"><div class="w3-col w3-container m2 w3-teal w3-bar-item w3-button" style="margin:0.5em 1em"><p>2.&nbsp 資料前處理</p></div></a>
+    <a href="#資料探索"><div class="w3-col w3-container m2 w3-yellow w3-bar-item w3-button" style="margin:0.5em 1em"><p>3.&nbsp 資料探索</p></div></a>
+    <a href="#機器學習"><div class="w3-col w3-container m2 w3-teal w3-bar-item w3-button" style="margin:0.5em 1em"><p>4.&nbsp 機器學習</p></div></a>
+    <a href="#預測及分析"><div class="w3-col w3-container m2 w3-yellow w3-bar-item w3-button" style="margin:0.5em 1em"><p>5.&nbsp 預測及分析</p></div></a>
+  </div>
+  
+  <div id="資料來源" class="w3-container">
+    <br>
+   <h1 class=" w3-center"><i class="fa fa-file-text-o"></i>&nbsp;資料來源</h1>
+   <hr>
+   <p class="w3-center w3-large w3-text-grey">本組使用位於對岸北京第三方數據提供商 TalkingData 公開在 kaggle 之資料集，
+    <br>此資料集包含三天內約 1.8 億筆廣告點擊行為與 App 下載行為之關係，
+    <br>主要目標為預測未來事件之下載可能性，次之為透過數據分析嘗試尋找點擊詐騙之模式。</p>
+   <div class="w3-container w3-row w3-center">
+     <p Align=center>
+       <img class=" w3-hover-opacity" onclick="onClick(this)" src="w3images/kaggle.png" style="width:35%;margin:auto" >
+       <img class=" w3-hover-opacity" onclick="onClick(this)" src="w3images/talkingdata.png" style="width:35%;margin:auto" >
+     </p>
+   </div>
+   <br>
+   <br>
+   <br>
+  </div>
+
+  <div id="資料前處理" class="w3-container">
+      <br> 
+     <h1 class=" w3-center"><i class="fa fa-desktop"></i>&nbsp; 資料前處理</h1>
+     <hr>
+     <p class="w3-center w3-large w3-text-grey">經由 R 以及 Python 語言進行原始資料處理，分別分為缺失值處理、資料型態處理、資料特徵縮放</p>
+     <p class="w3-center w3-large w3-text-grey">1.&nbsp;資料集</p>
+     <p Align=center>
+       <img class=" w3-hover-opacity" onclick="onClick(this)" src="w3images/table1.png" style="width:85%;margin:auto" >
+     </p>
+     <p class="w3-center w3-large w3-text-grey">2.&nbsp;資料品質報告<br>
+      經由資料集數據品質報告表的結果可以看出，我們的train.csv訓練資料集並無缺失值。
+    </p>
+     <p Align=center>
+        <img class=" w3-hover-opacity" onclick="onClick(this)" src="w3images/table2.png" style="width:85%;margin:auto" >
+      </p>
+    </div>
+
+  <div id="資料探索" class="w3-container">
+      <br>
+     <h1 class=" w3-center"><i class="fa fa-eye"></i>&nbsp; 資料探索</h1>
+     <hr>
+     <p class="w3-center w3-large w3-text-grey">透過 Ｒ、Python 和 Tableau 的方式進行資料視覺化及統計分析，對資料樣貌進行更深一步的認識</p>
+     <p Align=center>
+        <img class=" w3-hover-opacity" onclick="onClick(this)" src="w3images/clicktime_bar.png" style="width:100%;margin:auto" >
+     </p>
+    </div>
+
+  <div id="機器學習" class="w3-container">
+      <br>
+     <h1 class=" w3-center"><i class="fa fa-cogs"></i>&nbsp; 機器學習</h1>
+     <hr>
+     <p class="w3-center w3-large w3-text-grey">從給定的訓練資料集中找到特徵和目標，透過此訓練集學習出一個模型。訓練集中的目標是由人標註的，當新的資料到來時，可以根據這個模型預測結果</p>
+  
+    </div>
+  <div id="預測及分析" class="w3-container">
+      <br>
+     <h1 class=" w3-center"><i class="fa fa-bar-chart"></i>&nbsp; 預測及分析</h1>
+     <hr>
+     <p class="w3-center w3-large w3-text-grey">透過機器學習的結果可提出關於未來時間點、趨勢之預測，產出描述型分析、診斷型分析、預測型分析、指示型分析，提供面對問題的最適解法</p>
+  
+    </div>
+
+
+<!-- Footer -->
+
+<footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+       <!-- 
+        <div class="w3-xlarge w3-section">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>-->
+        <p>Powered by 宣卉 & 欽鴻 </a></p>
+      </footer>
+
+
+</body>
+</html>
